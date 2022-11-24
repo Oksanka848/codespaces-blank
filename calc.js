@@ -1,9 +1,9 @@
-window.onload = init;
+//window.onload = init;
 
-function init() {
-  let button = document.getElementById();
-  button.onclick = ButtonClick;
-}
+//function init() {
+  //let button = document.getElementById();
+  //button.onclick = ButtonClick;
+//}
 
 function ButtonClick() {
   let n1 = +prompt("Введите первое число");
