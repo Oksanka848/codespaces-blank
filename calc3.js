@@ -5,6 +5,10 @@
 let n1 = document.getElementById("n1").value;
 let n2 = document.getElementById("n2").value;
 let operation = document.querySelectorAll("[operation]");
+let plus = document.getElementById("plus");
+let minus = document.getElementById("minus");
+let multi = document.getElementById("multi");
+let divide = document.getElementById("divide");
 
 class Calculator {
   constructor(n1, n2) {
@@ -12,30 +16,30 @@ class Calculator {
     this.n2 = +n2; //число 2
   }
 
-  ButtonClick() {
+  static ButtonClick() {
     console.log(`Результат вычисления = ${this.n1 + this.n2}`);
   }
 
-  ButtonClick2() {
+  static ButtonClick2() {
     console.log(`Результат вычисления = ${this.n1 - this.n2}`);
   }
 
-  ButtonClick3() {
+  static ButtonClick3() {
     console.log(`Результат вычисления = ${this.n1 * this.n2}`);
   }
 
-  ButtonClick4() {
+  static ButtonClick4() {
     if (n2 == 0) {
       console.log(`На ноль делить нельзя`);
     }
     console.log(`Результат вычисления = ${this.n1 / this.n2}`);
   }
 }
+let myCalc = new Calculator();
+//let result=plus.addEventListener('click', console.log( Calculator.ButtonClick));
 
-let calculator = new Calculator(n1, n2);
+console.log(myCalc.ButtonClick());
+Calculator.ButtonClick2();
+Calculator.ButtonClick3();
+Calculator.ButtonClick4();
 
-calculator.ButtonClick();
-calculator.ButtonClick2();
-calculator.ButtonClick3();
-calculator.ButtonClick4();
-let button = document.addEventListener('click')
