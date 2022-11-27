@@ -38,11 +38,20 @@ class Calculator {
 //let result=plus.addEventListener('click', console.log( Calculator.ButtonClick));
 let n1 = document.getElementById("n1").value;
 let n2 = document.getElementById("n2").value;
-let button = document.addEventListener("click", function () {
-  Calculator.ButtonClick();
+/*let button = document.querySelectorAll(".button");
+let plus = Calculator.ButtonClick();
+button.addEventListener("click", function () {
+  let plus = Calculator.ButtonClick();
+  return plus;
+
 });
+/*let button = document.addEventListener("click", function () {
+  Calculator.ButtonClick()
+});*/
+
 
 console.log(Calculator.ButtonClick());
 console.log(Calculator.ButtonClick2());
 console.log(Calculator.ButtonClick3());
 console.log(Calculator.ButtonClick4());
+
