@@ -10,14 +10,13 @@ let multi = document.getElementById("multi");
 let divide = document.getElementById("divide");*/
 
 class Calculator {
- 
   static ButtonClick() {
-     plus = +n1 + +n2;
+    plus = +n1 + +n2;
     return plus;
   }
 
   static ButtonClick2() {
-   minus = +n1 - +n2;
+    minus = +n1 - +n2;
     return minus;
   }
 
@@ -28,10 +27,10 @@ class Calculator {
 
   static ButtonClick4() {
     if (+n2 == 0) {
-       console.log(`На ноль делить нельзя`);
-     return false;
+      console.log(`На ноль делить нельзя`);
+      return false;
     }
-    divide = +n1 * +n2;
+    divide = +n1 / +n2;
     return divide;
   }
 }
@@ -39,10 +38,11 @@ class Calculator {
 //let result=plus.addEventListener('click', console.log( Calculator.ButtonClick));
 let n1 = document.getElementById("n1").value;
 let n2 = document.getElementById("n2").value;
-let button = document.addEventListener('click', function() { Calculator.ButtonClick()});
+let button = document.addEventListener("click", function () {
+  Calculator.ButtonClick();
+});
 
 console.log(Calculator.ButtonClick());
 console.log(Calculator.ButtonClick2());
 console.log(Calculator.ButtonClick3());
 console.log(Calculator.ButtonClick4());
-
