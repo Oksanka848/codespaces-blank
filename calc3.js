@@ -2,46 +2,46 @@
 - Сложение, Умножение, Вычитание и Деление. 
 Доработайте свою страничку с калькулятором, 
 чтобы в ней использовались методы этого класса.*/
-let n1 = document.getElementById("n1");
-let n2 = document.getElementById("n2");
-let button = document.querySelectorAll("[operation]");
-let plus = document.getElementById("plus");
+
+//let button = document.querySelectorAll("[operation]");
+/*let plus = document.getElementById("plus");
 let minus = document.getElementById("minus");
 let multi = document.getElementById("multi");
-let divide = document.getElementById("divide");
+let divide = document.getElementById("divide");*/
 
 class Calculator {
-  constructor(n1, n2) {
-    this.n1 = +n1; //число 1
-    this.n2 = +n2; //число 2
-  }
-
-  static ButtonClick(plus) {
-     plus = this.n1 + this.n2;
+ 
+  static ButtonClick() {
+     plus = +n1 + +n2;
     return plus;
-    
-    //console.log(`Результат вычисления = ${this.n1 + this.n2}`);
   }
 
   static ButtonClick2() {
-    console.log(`Результат вычисления = ${this.n1 - this.n2}`);
+   minus = +n1 - +n2;
+    return minus;
   }
 
   static ButtonClick3() {
-    console.log(`Результат вычисления = ${this.n1 * this.n2}`);
+    multi = +n1 * +n2;
+    return multi;
   }
 
   static ButtonClick4() {
-    if (n2 == 0) {
-      console.log(`На ноль делить нельзя`);
+    if (+n2 == 0) {
+       console.log(`На ноль делить нельзя`);
+     return false;
     }
-    console.log(`Результат вычисления = ${this.n1 / this.n2}`);
+    divide = +n1 * +n2;
+    return divide;
   }
 }
 //let myCalc = new Calculator();
 //let result=plus.addEventListener('click', console.log( Calculator.ButtonClick));
+let n1 = document.getElementById("n1").value;
+let n2 = document.getElementById("n2").value;
+let button = document.addEventListener('click', function() { Calculator.ButtonClick()});
 
-console.log(Calculator.ButtonClick(plus));
+console.log(Calculator.ButtonClick());
 console.log(Calculator.ButtonClick2());
 console.log(Calculator.ButtonClick3());
 console.log(Calculator.ButtonClick4());
