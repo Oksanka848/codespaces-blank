@@ -2,9 +2,9 @@
 - Сложение, Умножение, Вычитание и Деление. 
 Доработайте свою страничку с калькулятором, 
 чтобы в ней использовались методы этого класса.*/
-let n1 = document.getElementById("n1").value;
-let n2 = document.getElementById("n2").value;
-let operation = document.querySelectorAll("[operation]");
+let n1 = document.getElementById("n1");
+let n2 = document.getElementById("n2");
+let button = document.querySelectorAll("[operation]");
 let plus = document.getElementById("plus");
 let minus = document.getElementById("minus");
 let multi = document.getElementById("multi");
@@ -16,8 +16,11 @@ class Calculator {
     this.n2 = +n2; //число 2
   }
 
-  static ButtonClick() {
-    console.log(`Результат вычисления = ${this.n1 + this.n2}`);
+  static ButtonClick(plus) {
+     plus = this.n1 + this.n2;
+    return plus;
+    
+    //console.log(`Результат вычисления = ${this.n1 + this.n2}`);
   }
 
   static ButtonClick2() {
@@ -35,11 +38,11 @@ class Calculator {
     console.log(`Результат вычисления = ${this.n1 / this.n2}`);
   }
 }
-let myCalc = new Calculator();
+//let myCalc = new Calculator();
 //let result=plus.addEventListener('click', console.log( Calculator.ButtonClick));
 
-console.log(myCalc.ButtonClick());
-Calculator.ButtonClick2();
-Calculator.ButtonClick3();
-Calculator.ButtonClick4();
+console.log(Calculator.ButtonClick(plus));
+console.log(Calculator.ButtonClick2());
+console.log(Calculator.ButtonClick3());
+console.log(Calculator.ButtonClick4());
 
