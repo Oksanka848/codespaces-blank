@@ -8,21 +8,25 @@
 let minus = document.getElementById("minus");
 let multi = document.getElementById("multi");
 let divide = document.getElementById("divide");*/
-
+const buttons = document.querySelectorAll(".button");
+for (button of buttons) { 
+button.addEventListener("click", function onClick() {
+let n1 = document.getElementById("n1").value;
+let n2 = document.getElementById("n2").value;
 class Calculator {
   static ButtonClick() {
-    plus = +n1 + +n2;
-    return plus;
+    +n1 + +n2;
+    return +n1 + +n2;
   }
 
   static ButtonClick2() {
-    minus = +n1 - +n2;
-    return minus;
+    +n1 - +n2;
+    return  +n1 - +n2;
   }
 
   static ButtonClick3() {
-    multi = +n1 * +n2;
-    return multi;
+    +n1 * +n2;
+    return +n1 * +n2;
   }
 
   static ButtonClick4() {
@@ -30,28 +34,14 @@ class Calculator {
       console.log(`На ноль делить нельзя`);
       return false;
     }
-    divide = +n1 / +n2;
-    return divide;
+    +n1 / +n2;
+    return +n1 / +n2;
   }
 }
-//let myCalc = new Calculator();
-//let result=plus.addEventListener('click', console.log( Calculator.ButtonClick));
-let n1 = document.getElementById("n1").value;
-let n2 = document.getElementById("n2").value;
-/*let button = document.querySelectorAll(".button");
-let plus = Calculator.ButtonClick();
-button.addEventListener("click", function () {
-  let plus = Calculator.ButtonClick();
-  return plus;
-
-});
-/*let button = document.addEventListener("click", function () {
-  Calculator.ButtonClick()
-});*/
-
 
 console.log(Calculator.ButtonClick());
 console.log(Calculator.ButtonClick2());
 console.log(Calculator.ButtonClick3());
 console.log(Calculator.ButtonClick4());
-
+});
+}
