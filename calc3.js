@@ -13,6 +13,7 @@ for (button of buttons) {
 button.addEventListener("click", function onClick() {
 let n1 = document.getElementById("n1").value;
 let n2 = document.getElementById("n2").value;
+let result = document.getElementById("result");
 class Calculator {
   static ButtonClick() {
     +n1 + +n2;
